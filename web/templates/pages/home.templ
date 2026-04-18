@@ -1,0 +1,46 @@
+package pages
+
+import (
+	"github.com/Bharat1Rajput/My-Portfolio/internal/model"
+	"github.com/Bharat1Rajput/My-Portfolio/web/templates/components"
+	"github.com/Bharat1Rajput/My-Portfolio/web/templates/layout"
+)
+
+templ homeContent(featured []model.Project, recent []model.BlogLink) {
+	<section class="hero">
+		<div class="terminal-prompt">
+			<span class="prompt-symbol">{ "$" }</span>
+			<span class="prompt-cmd">whoami</span>
+		</div>
+		<h1 class="hero-name">Bharat Singh</h1>
+		<p class="hero-bio">
+			Backend engineer building reliable distributed systems in Go.
+			Event-driven architecture, gRPC services, and systems that hold up under pressure.
+		</p>
+		<div class="cta-row">
+			<a href="/projects" class="btn btn-accent">view projects</a>
+			<a href="https://github.com/Bharat1Rajput" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">github</a>
+		</div>
+	</section>
+	<section class="section">
+		<h2 class="section-title">{ "Projects" }</h2>
+		<div class="card-grid">
+			for _, p := range featured {
+				@components.ProjectCard(p)
+			}
+		</div>
+	</section>
+	<section class="section">
+		<h2 class="section-title">{"Recent Writing" }</h2>
+		<div class="blog-list">
+			for _, post := range recent {
+				@components.BlogCard(post)
+			}
+		</div>
+		<a href="/blog" class="btn btn-ghost mt-lg">all posts</a>
+	</section>
+}
+
+templ Home(featured []model.Project, recent []model.BlogLink) {
+	@layout.Base("Home", homeContent(featured, recent))
+}

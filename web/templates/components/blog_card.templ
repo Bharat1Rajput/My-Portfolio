@@ -1,0 +1,19 @@
+package components
+
+import "github.com/Bharat1Rajput/My-Portfolio/internal/model"
+
+templ BlogCard(post model.BlogLink) {
+	<article class="card blog-card">
+		<div class="card-header">
+			<span class="muted mono card-date">{ post.Date }</span>
+			<div class="tag-row">
+				for _, t := range post.Tags {
+					<span class="tag">{ t }</span>
+				}
+			</div>
+		</div>
+		<h3 class="card-title">{ post.Title }</h3>
+		<p class="card-tagline">{ post.Summary }</p>
+		<a href={ templ.SafeURL(post.URL) } class="btn btn-accent" target="_blank" rel="noopener noreferrer">read on hashnode</a>
+	</article>
+}

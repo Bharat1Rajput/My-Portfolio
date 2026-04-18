@@ -1,0 +1,25 @@
+package pages
+
+import (
+	"github.com/Bharat1Rajput/My-Portfolio/internal/model"
+	"github.com/Bharat1Rajput/My-Portfolio/web/templates/components"
+	"github.com/Bharat1Rajput/My-Portfolio/web/templates/layout"
+)
+
+templ projectsContent(all []model.Project) {
+	<section class="section">
+		<h1 class="section-title">{ "Projects" }</h1>
+		<p class="section-sub muted">
+			Production-grade Go systems - each with a full system design writeup.
+		</p>
+		<div class="card-grid">
+			for _, p := range all {
+				@components.ProjectCard(p)
+			}
+		</div>
+	</section>
+}
+
+templ Projects(all []model.Project) {
+	@layout.Base("Projects", projectsContent(all))
+}

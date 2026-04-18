@@ -1,0 +1,44 @@
+package pages
+
+import (
+	"github.com/Bharat1Rajput/My-Portfolio/internal/model"
+	"github.com/Bharat1Rajput/My-Portfolio/web/templates/layout"
+)
+
+templ projectDetailContent(p model.Project) {
+	<section class="section">
+		<nav class="breadcrumb">
+			<a href="/projects">projects</a>
+			<span class="muted"> / </span>
+			<span>{ p.Title }</span>
+		</nav>
+		<div class="project-header">
+			<h1>{ p.Title }</h1>
+			<p class="hero-bio">{ p.Tagline }</p>
+			<div class="tag-row">
+				for _, s := range p.Stack {
+					<span class="tag">{ s }</span>
+				}
+			</div>
+			<a href={ templ.SafeURL(p.GithubURL) } class="btn btn-ghost mt-sm" target="_blank" rel="noopener noreferrer">view on github</a>
+		</div>
+		<div class="prose">
+			<h2>{ "Problem Statement" }</h2>
+			@templ.Raw(p.Problem)
+			<h2>{ "Architecture" }</h2>
+			@templ.Raw(p.Architecture)
+			<h2>{ "Design Decisions" }</h2>
+			@templ.Raw(p.Decisions)
+			<h2>{ "Trade-offs" }</h2>
+			@templ.Raw(p.Tradeoffs)
+			<h2>{ "Failure Handling" }</h2>
+			@templ.Raw(p.Failures)
+			<h2>{ "Improvements" }</h2>
+			@templ.Raw(p.Improvements)
+		</div>
+	</section>
+}
+
+templ ProjectDetail(p model.Project) {
+	@layout.Base(p.Title, projectDetailContent(p))
+}

@@ -1,0 +1,21 @@
+package components
+
+import "github.com/Bharat1Rajput/My-Portfolio/internal/model"
+
+templ ProjectCard(p model.Project) {
+	<article class="card project-card">
+		<div class="card-header">
+			<h3 class="card-title">{ p.Title }</h3>
+			<div class="tag-row">
+				for _, s := range p.Stack {
+					<span class="tag">{ s }</span>
+				}
+			</div>
+		</div>
+		<p class="card-tagline">{ p.Tagline }</p>
+		<div class="card-actions">
+			<a href={ templ.SafeURL(p.GithubURL) } class="btn btn-ghost" target="_blank" rel="noopener noreferrer">github</a>
+			<a href={ templ.SafeURL("/projects/" + p.Slug) } class="btn btn-accent">read more</a>
+		</div>
+	</article>
+}

@@ -1,0 +1,27 @@
+package pages
+
+import (
+    "github.com/Bharat1Rajput/My-Portfolio/internal/model"
+	"github.com/Bharat1Rajput/My-Portfolio/web/templates/components"
+	"github.com/Bharat1Rajput/My-Portfolio/web/templates/layout"
+)
+
+
+
+templ blogContent(posts []model.BlogLink) {
+	<section class="section">
+		<h1 class="section-title">{ "My Writings" }</h1>
+		<p class="section-sub muted">
+			I write on Hashnode - click any post to read.
+		</p>
+		<div class="blog-list">
+			for _, post := range posts {
+				@components.BlogCard(post)
+			}
+		</div>
+	</section>
+}
+
+templ Blog(posts []model.BlogLink) {
+	@layout.Base("Writing", blogContent(posts))
+}
