@@ -36,48 +36,48 @@ func aboutContent() templ.Component {
 			return templ_7745c5c3_Err
 		}
 		var templ_7745c5c3_Var2 string
-		templ_7745c5c3_Var2, templ_7745c5c3_Err = templ.JoinStringErrs("Who Is Bharat")
+		templ_7745c5c3_Var2, templ_7745c5c3_Err = templ.JoinStringErrs("Who I Am")
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `web/templates/pages/about.templ`, Line: 8, Col: 45}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `web/templates/pages/about.templ`, Line: 8, Col: 40}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var2))
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 2, "</h1><div class=\"prose about-prose\"><p>Bharat is a backend engineer focused on building reliable, observable systems in Go. My work sits at the intersection of distributed systems design, event-driven architecture, and production operational excellence.</p><p>He works in Go, focusing on distributed systems, event-driven architecture, and the operational realities of running services in production. Not just making systems work, but making them observable, debuggable, and resilient under failure.</p><p>His philosophy is simple: authenticity beats competition. No hype, no shortcuts — just building real systems, understanding them deeply, and improving them over time.</p><p>Outside of building, he writes about system design, shares learnings publicly.</p><h2>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 2, "</h1><div class=\"prose about-prose\"><p>I'm a backend engineer who builds distributed systems in Go — reliable, and designed to survive failure.</p><p>My focus is on the hard parts: event-driven architecture, service communication, data consistency, and the operational realities of running systems in production.</p><p>No hype, no shortcuts. Just deep understanding, honest trade-offs, and code that's easy to debug at 2 AM.</p><h2>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		var templ_7745c5c3_Var3 string
-		templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs("what he works with")
+		templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs("what I work with")
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `web/templates/pages/about.templ`, Line: 25, Col: 29}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `web/templates/pages/about.templ`, Line: 23, Col: 27}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 3, "</h2><ul class=\"tech-list\"><li><span class=\"accent\">Languages</span> - Go (primary), SQL, JavaScript</li><li><span class=\"accent\">Messaging</span> - Kafka, RabbitMQ, NATS</li><li><span class=\"accent\">Databases</span> - PostgreSQL, Redis</li><li><span class=\"accent\">Transport</span> - gRPC, REST, WebSockets</li><li><span class=\"accent\">Infra</span> - Docker, Kubernetes, Fly.io, Prometheus, Grafana</li><li><span class=\"accent\">Practices</span> - TDD, hexagonal architecture, event sourcing, CQRS</li></ul><h2>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 3, "</h2><ul class=\"tech-list\"><li><span class=\"accent\">Languages</span> - Go (primary), SQL, JavaScript</li><li><span class=\"accent\">Messaging</span> - Kafka, RabbitMQ</li><li><span class=\"accent\">Databases</span> - PostgreSQL, Redis</li><li><span class=\"accent\">Transport</span> - gRPC, REST</li><li><span class=\"accent\">Infra</span> - Docker, Kubernetes</li></ul><h2>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		var templ_7745c5c3_Var4 string
-		templ_7745c5c3_Var4, templ_7745c5c3_Err = templ.JoinStringErrs("Practices he believes in")
+		templ_7745c5c3_Var4, templ_7745c5c3_Err = templ.JoinStringErrs("Practices I believe in")
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `web/templates/pages/about.templ`, Line: 35, Col: 35}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `web/templates/pages/about.templ`, Line: 32, Col: 33}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var4))
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "</h2><ul class=\"link-list\"><li>Designing systems for failure, not just success</li><li>Idempotency and data consistency as first principles</li><li>Building observable systems (logs, metrics, tracing)</li><li>Keeping services loosely coupled with event-driven architecture</li><li>Clear boundaries using hexagonal architecture</li><li>Writing code that is easy to debug at 2 AM</li><li>Prefering simplicity over unnecessary abstractions</li><li>Thinking in terms of trade-offs, not tools</li></ul><h2>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "</h2><ul class=\"link-list\"><li>Designing for failure, not just the happy path</li><li>Idempotency and consistency as first principles</li><li>Keeping services loosely coupled</li><li>Thinking in trade-offs, not tools</li></ul><h2>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		var templ_7745c5c3_Var5 string
-		templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.JoinStringErrs("Where to Find him")
+		templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.JoinStringErrs("Where to Find me")
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `web/templates/pages/about.templ`, Line: 47, Col: 28}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `web/templates/pages/about.templ`, Line: 40, Col: 27}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var5))
 		if templ_7745c5c3_Err != nil {
